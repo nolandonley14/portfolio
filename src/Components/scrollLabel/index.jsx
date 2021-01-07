@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
 import { IconContext } from "react-icons";
-import { motion } from 'framer-motion';
 import { FaAngleDown } from 'react-icons/fa';
 
 

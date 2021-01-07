@@ -14,11 +14,6 @@ const LogoContainer = styled.div`
   align-items: center;
 `;
 
-const LogoImg = styled.img`
-  width: 8em;
-  height: 8em;
-`;
-
 const NameText = styled.div`
   margin-top: 6px;
   font-size: 60px;

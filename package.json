@@ -11,6 +11,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^17.0.1",
     "react-intersection-observer": "^8.31.0",
+    "react-page-scroller": "^2.0.11-beta",
     "react-script-tag": "^1.1.2",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",

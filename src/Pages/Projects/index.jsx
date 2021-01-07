@@ -1,10 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { motion } from 'framer-motion';
-import {Logo} from "../../Components/logo";
 import { Card } from "../../Components/card";
-import { ScrollLabel } from "../../Components/scrollLabel";
-import { useInView } from "react-intersection-observer";
+
 
 
 const ProjectsSection = styled.div`

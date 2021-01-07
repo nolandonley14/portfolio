@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from 'framer-motion';
-import {Logo} from "../../Components/logo";
 import {ReactComponent as NolanWithDesk} from "../../Assets/illustrations/nolanWithDesk.svg";
-import { Links } from "../../Components/links";
-import { ScrollLabel } from "../../Components/scrollLabel";
+import {ReactComponent as WebsiteLogo} from "../../Assets/logo/websiteLogo.svg";
 import "../../Styles/Pages/landingPage.css";
 
 
@@ -15,19 +12,9 @@ const LandingSection = styled.div`
   margin: 0;
 `
 
-const TitleLayout = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
-
 const LinksList = styled.div`
   margin-top: 20px;
-  width: 78%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -36,8 +23,11 @@ const LinksList = styled.div`
 `
 
 const LogoDiv = styled.div`
-  position: fixed;
-  width: 60%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  max-width: 1280px;
   height: auto;
 `
 
@@ -45,11 +35,17 @@ const Link = styled.a`
   color: #8CDBC4;
 `
 
+const HeaderLogo = styled.div`
+  position: sticky;
+  top: 30px;
+  left: 40px;
+  width: 50px;
+`
+
 const Title = styled.div`
-  margin-top: -50px;
-  margin-left: 200px;
-  width: 40%;
-  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 45vh;
   display: flex;
   flex-direction: column;
   color: #8CDBC4;
@@ -57,24 +53,23 @@ const Title = styled.div`
 `
 
 export function LandingPage(props) {
-  // Get the id of the <path> element and the length of <path>
-
   return <div>
     <LandingSection id = "landing">
-    <TitleLayout>
-      <Title>
-        Hey! I'm Nolan Donley, <br/>a UI / UX engineering student from Atlanta
-        <LinksList>
-          <Link>About</Link>
-          <Link>Skills</Link>
-          <Link>Projects</Link>
-          <Link>Education</Link>
-        </LinksList>
-      </Title>
-    </TitleLayout>
-    <LogoDiv>
-      <NolanWithDesk id="nolan-with-desk"></NolanWithDesk>
-    </LogoDiv>
+      <HeaderLogo>
+        <WebsiteLogo id="website-logo"></WebsiteLogo>
+      </HeaderLogo>
+        <Title>
+          Hey! I'm Nolan Donley, <br/>a UI / UX engineer from Atlanta
+          <LinksList>
+            <Link>About</Link>
+            <Link>Skills</Link>
+            <Link>Projects</Link>
+            <Link>Education</Link>
+          </LinksList>
+        </Title>
+      <LogoDiv>
+        <NolanWithDesk id="nolan-with-desk"></NolanWithDesk>
+      </LogoDiv>
   </LandingSection>
 
 </div>

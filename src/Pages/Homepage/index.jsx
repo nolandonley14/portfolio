@@ -1,8 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { LandingPage } from "./landingPage";
-import { BioPage } from "../Biography";
-import { ProjectsPage } from "../Projects";
+import ReactPageScroller from "react-page-scroller";
 
 
 const PageContainer = styled.div`
@@ -15,15 +14,38 @@ const PageContainer = styled.div`
   color: #fff;
 `
 
-const Spacer = styled.div`
-  width:100%;
-  height:50vh;
-`
 
-export function Homepage(props) {
 
-  return <PageContainer
-    id="background">
-    <LandingPage />
-  </PageContainer>
+export default class Homepage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {currentPage: null};
+  }
+
+  handlePageChange = number => {
+        this.setState({ currentPage: number})
+  }
+
+  handleBeforePageChange = number => {
+      console.log(number);
+  }
+
+  render() {
+      return (
+        <PageContainer
+        id="background">
+        <ReactPageScroller
+          pageOnChange = {this.handlePageChange}
+          onBeforePageScroll = {this.handleBeforePageChange}
+          customPageNumber = {this.state.currentPage}
+          animationTimer = {400}
+          >
+        <LandingPage />
+        <LandingPage />
+        </ReactPageScroller>
+      </PageContainer>
+
+    );
+  }
 }
