@@ -16,6 +16,24 @@ body {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "AristotelicaSmallCaps";
+  src: local("Aristotelica"), url("./fonts/AristotelicaSmallCaps-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani-ExtraLight"), url("./fonts/Biryani-ExtraLight.ttf") format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani-Regular"), url("./fonts/Biryani-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

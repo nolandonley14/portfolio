@@ -1,20 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { LandingPage } from "./landingPage";
+import LandingPage from "./landingPage";
+import BioPage from "../Biography";
+import ProjectsPage from "../Projects";
+import SkillsPage from "../Skills";
 import ReactPageScroller from "react-page-scroller";
 
 
 const PageContainer = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #1F2023;
   font-family: Aristotelica;
   color: #fff;
 `
-
-
 
 export default class Homepage extends React.Component {
 
@@ -39,10 +39,12 @@ export default class Homepage extends React.Component {
           pageOnChange = {this.handlePageChange}
           onBeforePageScroll = {this.handleBeforePageChange}
           customPageNumber = {this.state.currentPage}
-          animationTimer = {400}
+          animationTimer = {800}
           >
         <LandingPage />
-        <LandingPage />
+        <BioPage />
+        <SkillsPage />
+        <ProjectsPage />
         </ReactPageScroller>
       </PageContainer>
 

@@ -18,7 +18,7 @@ const LinksList = styled.div`
   height: auto;
   display: flex;
   flex-direction: row;
-  font-size: 12pt;
+  font-size: 1.25rem;
   justify-content: space-between;
 `
 
@@ -49,28 +49,30 @@ const Title = styled.div`
   display: flex;
   flex-direction: column;
   color: #8CDBC4;
-  font-size: 25pt;
+  font-size: 2.5rem;
 `
 
-export function LandingPage(props) {
-  return <div>
-    <LandingSection id = "landing">
-      <HeaderLogo>
-        <WebsiteLogo id="website-logo"></WebsiteLogo>
-      </HeaderLogo>
-        <Title>
-          Hey! I'm Nolan Donley, <br/>a UI / UX engineer from Atlanta
-          <LinksList>
-            <Link>About</Link>
-            <Link>Skills</Link>
-            <Link>Projects</Link>
-            <Link>Education</Link>
-          </LinksList>
-        </Title>
-      <LogoDiv>
-        <NolanWithDesk id="nolan-with-desk"></NolanWithDesk>
-      </LogoDiv>
-  </LandingSection>
+export default class LandingPage extends React.Component {
+   render() {
+     return (<div>
+       <LandingSection id = "landing">
+         <HeaderLogo>
+           <WebsiteLogo id="website-logo"></WebsiteLogo>
+         </HeaderLogo>
+           <Title>
+             Hey! I'm Nolan Donley, <br/>a UI / UX engineer from Atlanta
+             <LinksList>
+               <Link>About</Link>
+               <Link>Skills</Link>
+               <Link>Projects</Link>
+               <Link>Education</Link>
+             </LinksList>
+           </Title>
+         <LogoDiv>
+           <NolanWithDesk id="nolan-with-desk"></NolanWithDesk>
+         </LogoDiv>
+     </LandingSection>
 
-</div>
+   </div>);
+ }
 }

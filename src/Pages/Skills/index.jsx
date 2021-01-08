@@ -61,15 +61,12 @@ const MoreInfoButton = styled.a`
   color: #8CDBC4;
 `
 
-export default class BioPage extends React.Component {
+export default class SkillsPage extends React.Component {
    render() {
      return (
        <TestSection id="Section">
          <MainGroup>
            <BioGroup>
-             <BioText>
-               I enjoy developing creative, modern user interfaces for web, mobile, and embedded systems. My goal is to empower my community by helping to create innovative, human-centric, front-end solutions to complement our newest tech advancements. <br/><br/>I am most interested in AI, ML, FinTech, and Sports.
-               </BioText>
                <MoreInfoButton>
                  &lt; Read More &gt;
                </MoreInfoButton>
@@ -77,11 +74,8 @@ export default class BioPage extends React.Component {
          </MainGroup>
          <TitleGroup>
            <Title id="title-bio">
-             Designeloper
+             Skills
            </Title>
-           <Quote>
-             “A coffee drinking, energy-bar eating, coding machine <br/>with a keen eye for elegant design.” - Me
-           </Quote>
          </TitleGroup>
      </TestSection>
    );
