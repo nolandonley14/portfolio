@@ -1,0 +1,19 @@
+@import "custom";
+
+body {
+  background-color: #1F2023;
+}
+
+.light {
+  color: #fff;
+}
+
+.success-msg {
+  color: #8CDBC4;
+  padding: 10px 15px;
+}
+
+.fail-msg {
+  color: red;
+  padding: 10px 15px;
+}

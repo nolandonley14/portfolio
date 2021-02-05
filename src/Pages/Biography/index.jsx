@@ -1,20 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
+import "../../Styles/Pages/biography.css";
 
-
-const TestSection = styled.div`
+const MainSection = styled.div`
   width: 100%;
-  height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  bottom: 10px;
   padding: 0;
   margin: 0;
+  z-index: -1;
 `
-
-const MainGroup = styled.div`
-  height: 100%;
+const BioSpacer = styled.div`
+  height: 25vh;
 `
 
 const TitleGroup = styled.div`
@@ -28,6 +28,7 @@ const Title = styled.div`
   font-size: 8rem;
   font-weight: 500;
   text-align: center;
+  color: #8CDBC4;
 `
 
 const Quote = styled.div`
@@ -36,22 +37,21 @@ const Quote = styled.div`
   font-weight: normal;
   text-align: center;
   font-size: 1.4rem;
+  color: #fff;
 `
 
 const BioGroup = styled.div`
   width: 32%;
-  height: 80;
+  height: auto;
   display: flex;
   flex-direction: column;
-  position: relative;
-  left: 50%;
-  top: 30%;
   align-items: center;
 `
 
 const BioText = styled.div`
   font-family: Biryani-ExtraLight;
   font-size: 1rem;
+  color: #fff;
 `
 
 const MoreInfoButton = styled.a`
@@ -64,26 +64,25 @@ const MoreInfoButton = styled.a`
 export default class BioPage extends React.Component {
    render() {
      return (
-       <TestSection id="Section">
-         <MainGroup>
-           <BioGroup>
-             <BioText>
-               I enjoy developing creative, modern user interfaces for web, mobile, and embedded systems. My goal is to empower my community by helping to create innovative, human-centric, front-end solutions to complement our newest tech advancements. <br/><br/>I am most interested in AI, ML, FinTech, and Sports.
-               </BioText>
-               <MoreInfoButton>
-                 &lt; Read More &gt;
-               </MoreInfoButton>
-           </BioGroup>
-         </MainGroup>
-         <TitleGroup>
-           <Title id="title-bio">
-             Designeloper
-           </Title>
-           <Quote>
-             “A coffee drinking, energy-bar eating, coding machine <br/>with a keen eye for elegant design.” - Me
-           </Quote>
-         </TitleGroup>
-     </TestSection>
+         <MainSection>
+             <BioGroup>
+               <BioText>
+                 I enjoy developing creative, modern user interfaces for web, mobile, and embedded systems. My goal is to empower my community by helping to create innovative, human-centric, front-end solutions to complement our newest tech advancements. <br/><br/>I am most interested in Human-Computer Interaction, Artificial Intelligence, Machince Learning, FinTech, and Sports.
+                 </BioText>
+                 <MoreInfoButton>
+                   &lt; Read More &gt;
+                 </MoreInfoButton>
+             </BioGroup>
+             <BioSpacer/>
+           <TitleGroup>
+             <Title id="title-bio">
+               Designeloper
+             </Title>
+             <Quote>
+               “A coffee drinking, energy-bar eating, coding machine <br/>with a keen eye for elegant design.” - Me
+             </Quote>
+           </TitleGroup>
+         </MainSection>
    );
   }
 }

@@ -1,53 +1,48 @@
 import React from "react";
-import styled from "styled-components";
-import LandingPage from "./landingPage";
-import BioPage from "../Biography";
-import ProjectsPage from "../Projects";
-import SkillsPage from "../Skills";
-import ReactPageScroller from "react-page-scroller";
+import styled from "styled-components/macro";
+// import ReactPageScroller from "react-page-scroller";
+import {ReactComponent as NolanWithDesk} from "../../Assets/illustrations/nolanWithDesk.svg";
+import "../../Styles/Pages/homepage.css";
 
 
-const PageContainer = styled.div`
+const LandingSection = styled.div`
   width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+`
+
+const LogoDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  max-width: 1280px;
+  height: auto;
+`
+
+const Title = styled.div`
+  position: absolute;
+  left: 10%;
+  top: 45vh;
   display: flex;
   flex-direction: column;
-  background-color: #1F2023;
-  font-family: Aristotelica;
-  color: #fff;
+  color: #8CDBC4;
+  font-size: 2.5rem;
 `
 
 export default class Homepage extends React.Component {
+   render() {
+     return (<div>
+       <LandingSection id = "landing">
+           <Title>
+             Hey! I'm Nolan Donley, <br/>a UI / UX engineer from Atlanta
+           </Title>
+         <LogoDiv>
+           <NolanWithDesk id="nolan-with-desk"></NolanWithDesk>
+         </LogoDiv>
+     </LandingSection>
 
-  constructor(props) {
-    super(props);
-    this.state = {currentPage: null};
-  }
-
-  handlePageChange = number => {
-        this.setState({ currentPage: number})
-  }
-
-  handleBeforePageChange = number => {
-      console.log(number);
-  }
-
-  render() {
-      return (
-        <PageContainer
-        id="background">
-        <ReactPageScroller
-          pageOnChange = {this.handlePageChange}
-          onBeforePageScroll = {this.handleBeforePageChange}
-          customPageNumber = {this.state.currentPage}
-          animationTimer = {800}
-          >
-        <LandingPage />
-        <BioPage />
-        <SkillsPage />
-        <ProjectsPage />
-        </ReactPageScroller>
-      </PageContainer>
-
-    );
-  }
+   </div>);
+ }
 }

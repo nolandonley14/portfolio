@@ -1,25 +1,35 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
+import "../../Styles/Pages/skills.css";
+import EducationContainer from "../../Components/skills/EducationContainer";
+import SkillsContainer from "../../Components/skills/SkillsContainer";
+import CoursesContainer from "../../Components/skills/CoursesContainer";
 
-
-const TestSection = styled.div`
+const SkillsSection = styled.div`
   width: 100%;
-  height: 100vh;
-  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  z-index: -1;
 `
 
-const MainGroup = styled.div`
-  height: 100%;
+const ContentSeciton = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `
 
 const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
+  position: fixed;
+  bottom: 10px;
 `
 
 const Title = styled.div`
@@ -28,56 +38,24 @@ const Title = styled.div`
   font-size: 8rem;
   font-weight: 500;
   text-align: center;
-`
-
-const Quote = styled.div`
-  margin-top: -30px;
-  font-family: Biryani-Regular;
-  font-weight: normal;
-  text-align: center;
-  font-size: 1.4rem;
-`
-
-const BioGroup = styled.div`
-  width: 32%;
-  height: 80;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 50%;
-  top: 30%;
-  align-items: center;
-`
-
-const BioText = styled.div`
-  font-family: Biryani-ExtraLight;
-  font-size: 1rem;
-`
-
-const MoreInfoButton = styled.a`
-  margin-top: 20px;
-  font-family: Aristotelica;
-  font-size: 1rem;
-  color: #8CDBC4;
+  color: #fff;
 `
 
 export default class SkillsPage extends React.Component {
    render() {
      return (
-       <TestSection id="Section">
-         <MainGroup>
-           <BioGroup>
-               <MoreInfoButton>
-                 &lt; Read More &gt;
-               </MoreInfoButton>
-           </BioGroup>
-         </MainGroup>
+       <SkillsSection>
+         <ContentSeciton>
+           <EducationContainer/>
+           <SkillsContainer/>
+         </ContentSeciton>
+         <CoursesContainer />
          <TitleGroup>
            <Title id="title-bio">
-             Skills
+             Background
            </Title>
          </TitleGroup>
-     </TestSection>
+     </SkillsSection>
    );
   }
 }

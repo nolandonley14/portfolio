@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1F2023;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'IBM Plex Sans',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Aristotelica";
+  src: local("Aristotelica"), url("./fonts/AristotelicaDisplayDemiBold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "AristotelicaSmallCaps";
+  src: local("Aristotelica"), url("./fonts/AristotelicaSmallCaps-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani-ExtraLight"), url("./fonts/Biryani-ExtraLight.ttf") format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Biryani";
+  src: local("Biryani-Regular"), url("./fonts/Biryani-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

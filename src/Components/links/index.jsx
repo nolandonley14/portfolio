@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { motion } from 'framer-motion';
 import { IconContext } from "react-icons";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin, FaInstagram } from 'react-icons/fa';
