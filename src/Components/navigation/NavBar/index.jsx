@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import {NavLink as Link} from 'react-router-dom';
+import {NavHashLink as Link} from 'react-router-hash-link';
 import {ReactComponent as WebsiteLogo} from "../../../Assets/logo/websiteLogo.svg";
 
 const NavLine = styled.div`
   display: flex;
   flex-direction: row;
   width: 50%;
+  position: fixed;
   margin-left: 20px;
   margin-top: 10px;
   align-items: center;
@@ -17,7 +18,7 @@ const NavLine = styled.div`
 `
 
 const NavLink = styled(Link)`
-  color: #8CDBC4;
+  color: #555;
   display: flex;
   text-decoration: none;
   height: 100%;
@@ -25,10 +26,11 @@ const NavLink = styled(Link)`
   font-size: 1rem;
   margin-left: 20px;
   &:hover {
-    color: #5CAB94;
+    color: #8CDBC4;
+    text-decoration: none;
   }
   &.active {
-    color: #bbbbbb;
+    color: #8CDBC4;
   }
 `
 
@@ -47,24 +49,21 @@ export default function NavBar() {
   return (
       <NavLine >
         <div id="navbar">
-        <NavLink to="/">
-          Home
-        </NavLink>
-        <NavLink to="/about">
+        <NavLink smooth to="#about">
           About
         </NavLink>
-        <NavLink to="/background" >
+        <NavLink smooth to="#background" >
           Background
         </NavLink>
-        <NavLink to="/projects" >
+        <NavLink smooth to="#projects" >
           Projects
         </NavLink>
-        <NavLink to="/contact" >
+        <NavLink smooth to="#contact" >
           Contact Me
         </NavLink>
       </div>
         <NavSpacer id="nav-spacer"/>
-        <NavLink to="/">
+        <NavLink smooth to="#home">
           <NavLogo>
             <WebsiteLogo id="website-logo"></WebsiteLogo>
           </NavLogo>

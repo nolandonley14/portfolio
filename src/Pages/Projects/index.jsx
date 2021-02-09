@@ -5,14 +5,12 @@ import "../../Styles/Pages/projects.css";
 
 const ProjectsSection = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  right: 0;
-  bottom: 10px;
+  position: relative;
   z-index: -1;
 `
 
@@ -26,7 +24,7 @@ const CardSection = styled.div`
 const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   bottom: 10px;
 `
 
@@ -42,7 +40,7 @@ const Title = styled.div`
 export default class ProjectsPage extends React.Component {
    render() {
      return (
-       <ProjectsSection>
+       <ProjectsSection id="projects">
          <CardSection>
            <Card
              id="card1"
@@ -62,7 +60,7 @@ export default class ProjectsPage extends React.Component {
            </Card>
            <Card
              id="card3"
-             url="WebsiteShot.png"
+             url="nolanWithDesk.svg"
              title="Web Portfolio"
              description="I am the designer and solo developer of this portfolio. The project's main technologies are React, JavaScript, CSS3, and Firebase ."
              codeLink="https://github.com/nolandonley14/portfolio"

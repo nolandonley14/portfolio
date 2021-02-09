@@ -18,6 +18,7 @@ const CardImage = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0px 0px;
+  background-color: #1F2023;
 `
 
 const CardTitle = styled.div`

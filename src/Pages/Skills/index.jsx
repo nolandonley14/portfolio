@@ -7,14 +7,12 @@ import CoursesContainer from "../../Components/skills/CoursesContainer";
 
 const SkillsSection = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  right: 0;
-  bottom: 10px;
+  position: relative;
   z-index: -1;
 `
 
@@ -28,7 +26,7 @@ const ContentSeciton = styled.div`
 const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   bottom: 10px;
 `
 
@@ -44,7 +42,7 @@ const Title = styled.div`
 export default class SkillsPage extends React.Component {
    render() {
      return (
-       <SkillsSection>
+       <SkillsSection id="background">
          <ContentSeciton>
            <EducationContainer/>
            <SkillsContainer/>

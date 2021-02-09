@@ -2,6 +2,7 @@
 
 body {
   background-color: #1F2023;
+  height: 100vh;
 }
 
 .light {
@@ -16,4 +17,16 @@ body {
 .fail-msg {
   color: red;
   padding: 10px 15px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
 }

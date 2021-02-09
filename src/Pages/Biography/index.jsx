@@ -4,11 +4,11 @@ import "../../Styles/Pages/biography.css";
 
 const MainSection = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  bottom: 10px;
+  position: relative;
   padding: 0;
   margin: 0;
   z-index: -1;
@@ -20,6 +20,8 @@ const BioSpacer = styled.div`
 const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 10px;
 `
 
 const Title = styled.div`
@@ -46,6 +48,7 @@ const BioGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
 
 const BioText = styled.div`
@@ -64,8 +67,8 @@ const MoreInfoButton = styled.a`
 export default class BioPage extends React.Component {
    render() {
      return (
-         <MainSection>
-             <BioGroup>
+         <MainSection id='about'>
+             <BioGroup className="vertical-center">
                <BioText>
                  I enjoy developing creative, modern user interfaces for web, mobile, and embedded systems. My goal is to empower my community by helping to create innovative, human-centric, front-end solutions to complement our newest tech advancements. <br/><br/>I am most interested in Human-Computer Interaction, Artificial Intelligence, Machince Learning, FinTech, and Sports.
                  </BioText>
